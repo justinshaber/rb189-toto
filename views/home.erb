@@ -3,8 +3,12 @@
     <li>
       <a>
         <h2><%= dog[:name] %></h2>
-        <p>10</p>
+        <p><%= dog[:attributes].size %></p>
       </a>
     </li>
   <% end %>
 </ul>
+
+<% content_for :header_links do %>
+  <a class="add" href="/dogs/new">Add New Dog</a>
+<% end %>
